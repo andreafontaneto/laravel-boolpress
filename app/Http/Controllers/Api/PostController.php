@@ -31,6 +31,14 @@ class PostController extends Controller
         // aggiungo with() e gli passo le categorie + i tags per poi visualizzarli in pagina
         $post = Post::where('slug', $slug)->with(['category', 'tags'])->first();
 
+        // faccio un controllo per vedere SE NON ESISTE il post
+        if(!$post){
+            $post = [
+                'title' => 'Post non trovato',
+                'content' => ''
+            ];
+        }
+
         // adesso genero il JSON
         return response()->json($post);
     }
