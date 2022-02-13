@@ -13,6 +13,7 @@ import About from './components/pages/About';
 import Contacts from './components/pages/Contacts';
 import Posts from './components/pages/Posts';
 import PostDetail from './components/pages/PostDetail';
+import Error404 from './components/pages/Error404';
 
 // inizializzo la classe del Router che conterrà tutte le rotte
 const router = new VueRouter({
@@ -54,6 +55,12 @@ const router = new VueRouter({
       path: '/detail/:slug',
       name: 'detail',
       component: PostDetail
+    },
+    // ROTTA PER LA GESTIONE DEGLI ERRORI (da mettere IN FONDO!!)
+    {
+      path: '*', // "*" (asterisco) vuol dire qualsiasi altro percorso
+      // il "name" non serve per gestire l'errore 404
+      component: Error404
     }
   ]
 })
