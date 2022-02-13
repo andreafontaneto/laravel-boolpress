@@ -12,6 +12,7 @@ import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Contacts from './components/pages/Contacts';
 import Posts from './components/pages/Posts';
+import PostDetail from './components/pages/PostDetail';
 
 // inizializzo la classe del Router che conterrà tutte le rotte
 const router = new VueRouter({
@@ -47,6 +48,12 @@ const router = new VueRouter({
       path: '/blog',
       name: 'blog',
       component: Posts
+    },
+    {
+      // passo lo slug (che è un dato dinamico) nel path tramite i duepunti ":"
+      path: '/detail/:slug',
+      name: 'detail',
+      component: PostDetail
     }
   ]
 })

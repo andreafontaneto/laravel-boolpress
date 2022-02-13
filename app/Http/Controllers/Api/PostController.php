@@ -22,12 +22,14 @@ class PostController extends Controller
     }
 
     // genero un file JSON del singolo post in base allo slug
-    // quindi guardando le regole REST creo (oltre alla index) anche un funzione show() passandogli un paramentro "slug"
+    // quindi guardando le regole REST creo (oltre alla index) anche un funzione show()
+    // gli passo un paramentro "slug" (perchè lo show RICHIEDE per forza un parametro)
     public function show($slug){
 
         // recupero tutti i post DOVE (where) lo slug contenuto nella colonna 'slug' è uguale allo $slug che gli passo
         // dopodichè da tutti i post recuperati prendo SOLO IL PRIMO ( ->first() )
-        $post = Post::where('slug', $slug)->first();
+        // aggiungo with() e gli passo le categorie + i tags per poi visualizzarli in pagina
+        $post = Post::where('slug', $slug)->with(['category', 'tags'])->first();
 
         // adesso genero il JSON
         return response()->json($post);

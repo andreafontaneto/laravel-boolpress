@@ -1,7 +1,12 @@
 <template>
 
   <article>
-    <h3><a href="#">{{ post.title }}</a></h3>
+    <!-- <h3><a href="#">{{ post.title }}</a></h3> -->
+
+    <!-- sostituisco il link con un router-link -->
+    <!-- oltre al "name", gli passo "params" che è un oggetto a sua volta -->
+    <!-- gli passo come parametro il mio dato dinamico "slug" e come valore "post.slug" -->
+    <router-link :to="{name: 'detail', params: {slug: post.slug}}">{{ post.title }}</router-link>
     <p class="date">{{ formatDate }}</p>
     <p v-if="post.category" class="category">{{ post.category.name }}</p>
     <div v-if="post.tags">
