@@ -14,10 +14,18 @@ import Contacts from './components/pages/Contacts';
 
 // inizializzo la classe del Router che conterrà tutte le rotte
 const router = new VueRouter({
+  
   // con "mode" entra in relazione con la history del browser (per i tasti avanti e indietro del browser)
   mode: 'history',
+  
+  // gli dico alla classe ".router-link-exact-active" dei router-link di diventare la mia classe ".active"
+  linkExactActiveClass: 'active',
+  
   // con "routes:" (parola chiave) gli passo un array di oggetti con tutte le nostre rotte
-  // ogni singola rotta avraà un path(indirizzo), un name e un componente da usare
+  // ogni singola rotta avra... 
+  // un path (indirizzo nella url)
+  // un nome (name) per far funzionare i tag <router-link> (sostituiscono i tag <a href="#">) 
+  // un componente (component) da usare
   routes: [
     {
       path: '/',

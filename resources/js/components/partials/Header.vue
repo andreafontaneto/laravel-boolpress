@@ -4,16 +4,20 @@
     <nav>
       <ul>
         <li>
-          <a href="#">Home</a>
+          <!-- sostituisco i link con il tag <router-link> -->
+          <!-- per far funzionare i link aggiungo :to che prenderà un oggetto{} -->
+          <!-- questo oggetto avrà un parametro "name" che sarà quello settato nelle routes.js -->
+          <router-link :to="{name: 'home'}">Home</router-link>
         </li>
         <li>
-          <a class="active" href="#">Blog</a>
+          <a href="#">Blog</a>
+          <!-- <router-link :to="{name: ''}">Blog</router-link> -->
         </li>
         <li>
-          <a href="#">Chi siamo</a>
+          <router-link :to="{name: 'about'}">Chi siamo</router-link>
         </li>
         <li>
-          <a href="#">Contatti</a>
+          <router-link :to="{name: 'contacts'}">Contatti</router-link>
         </li>        
       </ul>
     </nav>

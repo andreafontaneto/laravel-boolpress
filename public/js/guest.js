@@ -2075,6 +2075,10 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'Header'
 });
@@ -3574,30 +3578,50 @@ var render = function () {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _vm._m(0)
+  return _c("header", [
+    _c("nav", [
+      _c("ul", [
+        _c(
+          "li",
+          [
+            _c("router-link", { attrs: { to: { name: "home" } } }, [
+              _vm._v("Home"),
+            ]),
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _vm._m(0),
+        _vm._v(" "),
+        _c(
+          "li",
+          [
+            _c("router-link", { attrs: { to: { name: "about" } } }, [
+              _vm._v("Chi siamo"),
+            ]),
+          ],
+          1
+        ),
+        _vm._v(" "),
+        _c(
+          "li",
+          [
+            _c("router-link", { attrs: { to: { name: "contacts" } } }, [
+              _vm._v("Contatti"),
+            ]),
+          ],
+          1
+        ),
+      ]),
+    ]),
+  ])
 }
 var staticRenderFns = [
   function () {
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("header", [
-      _c("nav", [
-        _c("ul", [
-          _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Home")])]),
-          _vm._v(" "),
-          _c("li", [
-            _c("a", { staticClass: "active", attrs: { href: "#" } }, [
-              _vm._v("Blog"),
-            ]),
-          ]),
-          _vm._v(" "),
-          _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Chi siamo")])]),
-          _vm._v(" "),
-          _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Contatti")])]),
-        ]),
-      ]),
-    ])
+    return _c("li", [_c("a", { attrs: { href: "#" } }, [_vm._v("Blog")])])
   },
 ]
 render._withStripped = true
@@ -18982,8 +19006,13 @@ vue__WEBPACK_IMPORTED_MODULE_0___default.a.use(vue_router__WEBPACK_IMPORTED_MODU
 var router = new vue_router__WEBPACK_IMPORTED_MODULE_1__["default"]({
   // con "mode" entra in relazione con la history del browser (per i tasti avanti e indietro del browser)
   mode: 'history',
+  // gli dico alla classe ".router-link-exact-active" dei router-link di diventare la mia classe ".active"
+  linkExactActiveClass: 'active',
   // con "routes:" (parola chiave) gli passo un array di oggetti con tutte le nostre rotte
-  // ogni singola rotta avraà un path(indirizzo), un name e un componente da usare
+  // ogni singola rotta avra... 
+  // un path (indirizzo nella url)
+  // un nome (name) per far funzionare i tag <router-link> (sostituiscono i tag <a href="#">) 
+  // un componente (component) da usare
   routes: [{
     path: '/',
     name: 'home',
