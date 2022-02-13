@@ -44,8 +44,8 @@
 </template>
 
 <script>
-
-import PostItem from './partials/PostItem.vue';
+// dopo lo spostamento di Posts dentro alla cartella "pages", correggere il from del componente!!
+import PostItem from '../partials/PostItem.vue';
 
 export default {
   name: 'Posts',

@@ -7,11 +7,11 @@
           <!-- sostituisco i link con il tag <router-link> -->
           <!-- per far funzionare i link aggiungo :to che prenderà un oggetto{} -->
           <!-- questo oggetto avrà un parametro "name" che sarà quello settato nelle routes.js -->
+          <!-- funziona anche con: <router-link to="/">Home</router-link> (quindi senza binding e name) -->
           <router-link :to="{name: 'home'}">Home</router-link>
         </li>
         <li>
-          <a href="#">Blog</a>
-          <!-- <router-link :to="{name: ''}">Blog</router-link> -->
+          <router-link :to="{name: 'blog'}">Blog</router-link>
         </li>
         <li>
           <router-link :to="{name: 'about'}">Chi siamo</router-link>

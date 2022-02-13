@@ -11,6 +11,7 @@ Vue.use(VueRouter);
 import Home from './components/pages/Home';
 import About from './components/pages/About';
 import Contacts from './components/pages/Contacts';
+import Posts from './components/pages/Posts';
 
 // inizializzo la classe del Router che conterrà tutte le rotte
 const router = new VueRouter({
@@ -41,6 +42,11 @@ const router = new VueRouter({
       path: '/contatti',
       name: 'contacts',
       component: Contacts
+    },
+    {
+      path: '/blog',
+      name: 'blog',
+      component: Posts
     }
   ]
 })
