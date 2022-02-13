@@ -2040,6 +2040,15 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   name: 'PostDetail',
   data: function data() {
@@ -2376,7 +2385,7 @@ exports = module.exports = __webpack_require__(/*! ../../../../node_modules/css-
 
 
 // module
-exports.push([module.i, ".container[data-v-5ccc70a7] {\n  margin-top: 50px;\n}\n.container .title[data-v-5ccc70a7] {\n  margin-bottom: 30px;\n}", ""]);
+exports.push([module.i, ".container[data-v-5ccc70a7] {\n  margin-top: 50px;\n}\n.container .title[data-v-5ccc70a7], .container .category[data-v-5ccc70a7] {\n  margin-bottom: 20px;\n}\n.container .category[data-v-5ccc70a7] {\n  font-weight: bold;\n  font-style: italic;\n  background-color: #008cff;\n  display: inline-block;\n  padding: 5px 15px;\n  color: white;\n}\n.container .tags[data-v-5ccc70a7] {\n  margin-bottom: 20px;\n}\n.container .tags .tag[data-v-5ccc70a7] {\n  font-size: 12px;\n  margin-right: 10px;\n  background-color: aqua;\n  padding: 5px 15px;\n}", ""]);
 
 // exports
 
@@ -3925,6 +3934,25 @@ var render = function () {
   var _c = _vm._self._c || _h
   return _c("main", { staticClass: "container" }, [
     _c("h1", { staticClass: "title" }, [_vm._v(_vm._s(_vm.post.title))]),
+    _vm._v(" "),
+    _vm.post.category
+      ? _c("h3", { staticClass: "category" }, [
+          _vm._v(_vm._s(_vm.post.category.name)),
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    _vm.post.tags
+      ? _c(
+          "div",
+          { staticClass: "tags" },
+          _vm._l(_vm.post.tags, function (tag, index) {
+            return _c("span", { key: "tag" + index, staticClass: "tag" }, [
+              _vm._v(_vm._s(tag.name)),
+            ])
+          }),
+          0
+        )
+      : _vm._e(),
     _vm._v(" "),
     _c("p", { staticClass: "content" }, [_vm._v(_vm._s(_vm.post.content))]),
   ])
