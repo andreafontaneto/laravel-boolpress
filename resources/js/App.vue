@@ -4,7 +4,11 @@
   
   <Header />
   
-  <Posts />
+  <!-- ora Posts non serve più -->
+  <!-- <Posts /> -->
+
+  <!-- qui si iniettano tutti i componenti dalle rotte -->
+  <router-view></router-view>
   
   <Footer />
 
@@ -16,7 +20,7 @@
 
 import Header from './components/partials/Header.vue';
 import Footer from './components/partials/Footer.vue';
-import Posts from './components/Posts.vue';
+// import Posts from './components/Posts.vue';
 
 export default {
   name: 'App',
@@ -24,7 +28,7 @@ export default {
   components: {
     Header,
     Footer,
-    Posts
+    // Posts
   }
 }
 </script>

@@ -1,7 +1,7 @@
 <template>
   
   <main class="container">
-    <h1>Chi siamo</h1>
+    <h1>Contatti</h1>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse hic perferendis quos facere at! Animi ipsam quas repudiandae corporis. Voluptatum esse impedit nulla alias dolorum consequuntur praesentium id labore repellendus!
     </p>
@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'Home'
+  name: 'Contacts'
 }
 </script>
 
